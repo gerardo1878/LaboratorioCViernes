@@ -1,34 +1,52 @@
+/*
+autor: Gerardo A. Resendiz Rodriguez
+fecha: 20/09/2019
+grupo: 006
+horario: viernes 7am-9am
+matricula: 1878246
+*/
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	//***************************actividad 1*****************************
-	int a=0,op=0,suma=0,nums=0;
-
-	 printf("actividad 1\n\n");
-	do
+	
+	//******************************actividad 1*******************************************
+	int cal=0, i=0, sum=0;
+	float prom=0;
+	
+	for(i=1; i<=10; i++)
 	{
-		printf("introduzca un numero entero\n");
-		scanf("%d", &a);
-		printf("¿desea introducir otro? (s/n)\n 1-si\n 0-no\n");
-		scanf("%d", &op);
-		suma=suma+a;
-		nums=nums+1;
-		
-	} while(op!=0);
-	printf("la suma de los numeros enteros es %d\n",suma);
+		printf("ingrese las calificaciones del alumno\n");
+		scanf("%d", &cal);
+		sum=cal+sum;
+	}
+	printf("\nla suma de las calificaciones es %d\n", sum);
+	prom=sum/10;
+	printf("el promedio del alumno es %f\n", prom);
 	
-	//****************************actividad 2****************************
+	if(prom>=7)
+	{
+		printf("APROBADO\n");
+	}
+	else
+	{
+		printf("reprobado\n");
+	}
 	
-	float n=0;
-	printf("actividad 2\n\n");
-	do{
-		printf("ingrese un valor para n\n");
-		scanf("%f", &n);
-		printf("ingreso el numero %.2f\n", n);
-		
-	}while(n<=100);
+	//******************************actividad 2*******************************************
+	
+	int base=0, exponente=0, r=0;
+	
+	printf("ingrese la base\n");
+	scanf("%d", &base);
+	printf("ingrese el exponente\n");
+	scanf("%d", &exponente);
+	
+	
+	r=pow(base,exponente);
+	printf("r=%d", r);
+	
 	return 0;
 }
